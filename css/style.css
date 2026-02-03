@@ -12,12 +12,41 @@
   opacity: 1;
   transform: scale(1) rotate(0deg);
 }
-/* ===== CARROSSEL DE FEEDBACKS ===== */
 .carousel-feedback {
   position: relative;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#carousel-feedback-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  min-height: 28px;
+}
+
+#carousel-feedback-dots span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  background: #ececec;
+  box-shadow: 0 2px 8px rgba(209,59,123,0.10);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  border: 2px solid transparent;
+}
+
+#carousel-feedback-dots span.active {
+  background: #d13b7b;
+  transform: scale(1.22);
+  box-shadow: 0 2px 12px rgba(209,59,123,0.18);
+  border: 2px solid #fff;
+  z-index: 1;
 }
 
 

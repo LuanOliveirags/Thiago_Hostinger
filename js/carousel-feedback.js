@@ -11,13 +11,7 @@ function updateDots() {
   dotsContainer.innerHTML = '';
   feedbackImages.forEach((_, idx) => {
     const dot = document.createElement('span');
-    dot.style.width = '11px';
-    dot.style.height = '11px';
-    dot.style.borderRadius = '50%';
-    dot.style.display = 'inline-block';
-    dot.style.background = idx === currentIndex ? '#d13b7b' : '#e0e0e0';
-    dot.style.cursor = 'pointer';
-    dot.style.transition = 'background 0.2s';
+    if (idx === currentIndex) dot.classList.add('active');
     dot.addEventListener('click', () => {
       currentIndex = idx;
       showFeedback(currentIndex);
