@@ -52,8 +52,9 @@
 
 #carousel-feedback-img-container {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 16/10;
+  max-width: 900px;
+  aspect-ratio: 16/7.5;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
