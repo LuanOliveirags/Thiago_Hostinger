@@ -609,7 +609,7 @@ body {
   width: 100%;
   background: transparent;
   backdrop-filter: none;
-  border-bottom: 1px solid rgba(0, 247, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.1);
   z-index: 1000;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
@@ -760,8 +760,8 @@ body {
   color: var(--primary);
   letter-spacing: 10px;
   margin-bottom: 1rem;
-  text-shadow: 0 0 30px rgba(0, 247, 255, 0.6),
-               0 0 60px rgba(0, 247, 255, 0.4),
+  text-shadow: 0 0 30px rgba(255, 0, 0, 0.6),
+               0 0 60px rgba(255, 0, 0, 0.4),
                0 5px 30px rgba(0, 0, 0, 0.8);
   animation: neonGlow 2s ease-in-out infinite alternate;
 }
@@ -801,26 +801,26 @@ body {
 
 @keyframes neonGlow {
   0% {
-    text-shadow: 0 0 30px rgba(0, 247, 255, 0.6),
-                 0 0 60px rgba(0, 247, 255, 0.4),
+    text-shadow: 0 0 30px rgba(255, 8, 0, 0.6),
+                 0 0 60px rgba(255, 30, 0, 0.4),
                  0 5px 30px rgba(0, 0, 0, 0.8);
   }
   100% {
-    text-shadow: 0 0 40px rgba(0, 247, 255, 0.8),
-                 0 0 80px rgba(0, 247, 255, 0.6),
-                 0 0 120px rgba(0, 247, 255, 0.3),
+    text-shadow: 0 0 40px rgba(255, 0, 0, 0.8),
+                 0 0 80px rgba(255, 0, 0, 0.6),
+                 0 0 120px rgba(255, 0, 0, 0.3),
                  0 5px 30px rgba(0, 0, 0, 0.8);
   }
 }
 
 @keyframes pulseButton {
   0%, 100% {
-    box-shadow: 0 15px 40px rgba(0, 247, 255, 0.4);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.4);
   }
   50% {
-    box-shadow: 0 15px 40px rgba(0, 247, 255, 0.6),
-                0 0 0 15px rgba(0, 247, 255, 0.1),
-                0 0 0 30px rgba(0, 247, 255, 0.05);
+    box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6),
+                0 0 0 15px rgba(255, 0, 0, 0.1),
+                0 0 0 30px rgba(255, 0, 0, 0.05);
   }
 }
 
@@ -835,13 +835,13 @@ body {
   border-radius: 50px;
   transition: var(--transition);
   letter-spacing: 1px;
-  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
 }
 
 .cta-button:hover {
   background: var(--light);
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 247, 255, 0.5);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.5);
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -893,7 +893,7 @@ body {
 
 .process-card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 247, 255, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.1);
   border-radius: 15px;
   padding: 40px 30px;
   text-align: center;
@@ -920,7 +920,7 @@ body {
 .process-card:hover {
   border-color: var(--primary);
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 247, 255, 0.2);
+  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.2);
 }
 
 .process-number {
