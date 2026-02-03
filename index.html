@@ -7,31 +7,7 @@
     <title>Thiago Bazillio - Personal Trainer | Treinamento Feminino</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap" rel="stylesheet"/>
-    <style>
-        /* Estilos para o carrossel de feedbacks */
-        #carousel-feedback-prev:hover, 
-        #carousel-feedback-next:hover {
-            color: #ff2e6e !important;
-            transform: translateY(-50%) scale(1.2);
-        }
-        @media (max-width: 768px) {
-            .carousel-feedback {
-                padding: 0 50px !important;
-            }
-            #carousel-feedback-prev,
-            #carousel-feedback-next {
-                font-size: 2em !important;
-            }
-        }
-        @media (max-width: 480px) {
-            .carousel-feedback {
-                padding: 0 40px !important;
-            }
-            #carousel-feedback-img-container {
-                max-width: 100% !important;
-            }
-        }
-    </style>
+    <!-- Estilos do carrossel estão agora apenas em css/style.css -->
     <script src="js/carousel-feedback.js" defer></script>
 </head>
 <body>
@@ -319,11 +295,9 @@
             <h2 class="section-title">Feedbacks de Alunas</h2>
             <p class="results-intro">Veja os feedbacks reais das alunas sobre o acompanhamento!</p>
             <div class="carousel-feedback" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; margin-top: 32px; position: relative; max-width: 800px; margin-left: auto; margin-right: auto; padding: 0 60px;">
-                <button id="carousel-feedback-prev" aria-label="Anterior">&#10094;</button>
                 <div id="carousel-feedback-img-container">
                     <img id="carousel-feedback-img" src="img/F_1.PNG" alt="Feedback real" />
                 </div>
-                <button id="carousel-feedback-next" aria-label="Próximo">&#10095;</button>
                 <div id="carousel-feedback-progress">
                     <!-- Barra de progresso será inserida via JS -->
                 </div>

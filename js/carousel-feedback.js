@@ -56,14 +56,6 @@ function startAutoCarousel() {
 
 document.addEventListener('DOMContentLoaded', function() {
   showFeedback(currentIndex);
-  document.getElementById('carousel-feedback-next').addEventListener('click', function() {
-    nextFeedback();
-    startAutoCarousel();
-  });
-  document.getElementById('carousel-feedback-prev').addEventListener('click', function() {
-    prevFeedback();
-    startAutoCarousel();
-  });
   startAutoCarousel();
 
   // Swipe para mobile
