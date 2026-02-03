@@ -105,6 +105,33 @@ function initModalImagens() {
     e.stopPropagation();
     mostrarImagemModal(imagemAtual + 1);
   });
+
+  // Suporte a gesto de deslize no modal
+  let touchStartX = 0;
+  let isSwiping = false;
+
+  modal.addEventListener('touchstart', function(e) {
+    if (e.touches.length !== 1) return;
+    touchStartX = e.touches[0].clientX;
+    isSwiping = true;
+  }, { passive: true });
+
+  modal.addEventListener('touchmove', function(e) {
+    if (!isSwiping || e.touches.length !== 1) return;
+    const deltaX = e.touches[0].clientX - touchStartX;
+    if (Math.abs(deltaX) > 60) {
+      if (deltaX > 0) {
+        mostrarImagemModal(imagemAtual - 1);
+      } else {
+        mostrarImagemModal(imagemAtual + 1);
+      }
+      isSwiping = false;
+    }
+  }, { passive: true });
+
+  modal.addEventListener('touchend', function() {
+    isSwiping = false;
+  });
 }
 
 // ===== FAQ ACCORDION =====

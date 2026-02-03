@@ -152,9 +152,13 @@
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  .info-simetria-container {
     width: 100%;
     margin: 0 auto;
   }
+
   .info-simetria-text h3,
   .info-simetria-text p,
   .info-simetria-text ul,
