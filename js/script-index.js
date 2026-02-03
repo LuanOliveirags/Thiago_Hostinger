@@ -114,9 +114,8 @@ function initFAQ() {
   faqCards.forEach(card => {
     const question = card.querySelector('.faq-question');
     const answer = card.querySelector('.faq-answer');
-    const arrow = card.querySelector('.faq-arrow');
     
-    if (!question || !answer || !arrow) return;
+    if (!question || !answer) return;
     
     question.addEventListener('click', () => {
       const isActive = card.classList.contains('active');
@@ -126,9 +125,7 @@ function initFAQ() {
         if (otherCard !== card) {
           otherCard.classList.remove('active');
           const otherAnswer = otherCard.querySelector('.faq-answer');
-          const otherArrow = otherCard.querySelector('.faq-arrow');
           if (otherAnswer) otherAnswer.style.display = 'none';
-          if (otherArrow) otherArrow.textContent = '+';
         }
       });
       
@@ -136,11 +133,9 @@ function initFAQ() {
       if (isActive) {
         card.classList.remove('active');
         answer.style.display = 'none';
-        arrow.textContent = '+';
       } else {
         card.classList.add('active');
         answer.style.display = 'block';
-        arrow.textContent = '−';
       }
     });
   });
