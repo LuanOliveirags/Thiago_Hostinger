@@ -53,13 +53,13 @@
 #carousel-feedback-img-container {
   width: 100%;
   max-width: 900px;
-  aspect-ratio: 2/1;
-  min-height: 300px;
+  aspect-ratio: 16/21;
+  min-height: 340px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #181818;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow: 0 4px 32px rgba(209,59,123,0.18);
   transition: box-shadow 0.4s, width 0.4s, height 0.4s;
@@ -69,12 +69,13 @@
 #carousel-feedback-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 0;
+  object-fit: contain;
+  border-radius: 0 !important;
   transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   background: #181818;
   box-shadow: 0 2px 16px rgba(209,59,123,0.10);
+  display: block;
 }
 
 #carousel-feedback-prev,
@@ -109,14 +110,21 @@
   font-size: 2.2em;
 }
 /* Centralizar seção de resultados simétricos em mobile */
-@media (max-width: 700px) {
-  .info-simetria-container {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
+@media (max-width: 480px) {
+  .carousel-feedback {
+    padding: 0 10px !important;
   }
-  .info-simetria-text {
-    text-align: center !important;
+  #carousel-feedback-img-container {
+    max-width: 98vw !important;
+    aspect-ratio: 16/21 !important;
+    min-height: 220px !important;
+    border-radius: 14px !important;
+  }
+  #carousel-feedback-img {
+    object-fit: contain !important;
+    border-radius: 0 !important;
+  }
+}
     width: 100%;
     margin: 0 auto;
   }
