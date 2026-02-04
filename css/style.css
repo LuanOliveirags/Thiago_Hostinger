@@ -30,7 +30,7 @@
   align-items: center;
   position: absolute;
   left: 0;
-  bottom: 38px;
+  bottom: 100px;
   z-index: 3;
   pointer-events: none;
 }
