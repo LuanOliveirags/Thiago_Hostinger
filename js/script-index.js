@@ -19,7 +19,56 @@ document.addEventListener('DOMContentLoaded', function() {
   initMenuMobile();
   initModalImagens();
   initFAQ();
+  initForWhoCardsHighlight();
 });
+// ===== DESTAQUE DINÂMICO DOS CARDS "PARA QUEM É" NO MOBILE =====
+function initForWhoCardsHighlight() {
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  if (!isMobile) return;
+  // Seleciona todos os elementos que devem ter destaque automático
+  const blocks = Array.from(document.querySelectorAll('.forwho-card, .forwho-bad-modern, .forwho-good-modern, .process-card'));
+  // Adiciona também os itens da lista de diferenciais
+  const diffListItems = Array.from(document.querySelectorAll('.diferenciais-list li'));
+  if (diffListItems.length) {
+    blocks.push(...diffListItems);
+  }
+  // Adiciona os itens de resultados incríveis
+  const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+  if (portfolioItems.length) {
+    blocks.push(...portfolioItems);
+  }
+  if (!blocks.length) return;
+
+  function getBlockCenterDistance(block) {
+    const rect = block.getBoundingClientRect();
+    const blockCenter = rect.top + rect.height / 2;
+    const viewportCenter = window.innerHeight / 2;
+    return Math.abs(blockCenter - viewportCenter);
+  }
+
+  function highlightMostCenteredBlock() {
+    let minDist = Infinity;
+    let idx = 0;
+    blocks.forEach((block, i) => {
+      const dist = getBlockCenterDistance(block);
+      if (dist < minDist) {
+        minDist = dist;
+        idx = i;
+      }
+    });
+    blocks.forEach((block, i) => {
+      if (i === idx) {
+        block.classList.add('active-highlight');
+      } else {
+        block.classList.remove('active-highlight');
+      }
+    });
+  }
+
+  highlightMostCenteredBlock();
+  window.addEventListener('scroll', highlightMostCenteredBlock);
+  window.addEventListener('resize', highlightMostCenteredBlock);
+}
 
 // ===== MENU MOBILE =====
 function initMenuMobile() {
