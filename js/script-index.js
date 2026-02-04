@@ -1,3 +1,19 @@
+// ====================================================
+// script-index.js - Scripts principais do site
+// Objetivo: Controlar menu mobile, modais de imagem, FAQ, animações e interações gerais
+//
+// Etapa 3: Scripts e interações
+// - Cada função está comentada para facilitar manutenção
+// - Não altere a lógica sem necessidade
+//
+// Principais funções:
+//   3.1 Menu mobile
+//   3.2 Modal de imagens dos resultados
+//   3.3 FAQ accordion
+//   3.4 Preloader
+//   3.5 Scroll suave
+//   3.6 Animações de estatísticas e scroll
+// ====================================================
 // ===== INICIALIZAÇÃO GERAL =====
 document.addEventListener('DOMContentLoaded', function() {
   initMenuMobile();

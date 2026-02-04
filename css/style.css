@@ -1,3 +1,29 @@
+/*
+====================================================
+  style.css - Folha de estilos principal do site
+  Objetivo: Definir toda a aparência, responsividade e animações do site Thiago Bazillio
+
+  Etapa 2: Estilos CSS
+  - Cada bloco/seção do CSS está comentado para facilitar manutenção
+  - Utilize este arquivo para customizar visual, responsividade e efeitos
+
+  Principais seções:
+    2.1 Feedbacks e carrossel
+    2.2 Seção Info Simetria
+    2.3 Diferenciais
+    2.4 Para quem é
+    2.5 Menu e navegação
+    2.6 Hero (capa)
+    2.7 Sobre mim
+    2.8 Processos
+    2.9 Planos
+    2.10 Resultados
+    2.11 FAQ
+    2.12 Footer
+    2.13 Botões flutuantes
+    2.14 Responsividade
+====================================================
+*/
 .feedback-orbit {
   position: relative;
   margin: 48px auto 0 auto;
@@ -753,23 +779,35 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+
+/* ===== LOGO NO MENU LATERAL (inspirado no logo principal) ===== */
 .menu-brand-name {
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 3px;
-  margin: 0 0 12px 0;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: 0.18em;
+  margin: 0 0 0.2em 0;
   text-transform: uppercase;
-  line-height: 1.2;
+  line-height: 1.05;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: block;
 }
 
 .menu-brand-subtitle {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 4px;
-  margin: 0;
+  font-size: 1.15rem;
+  color: #fff;
+  letter-spacing: 0.35em;
+  margin: 0.1em 0 0 0;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 400;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  display: block;
+  border-top: 2.5px solid #fff;
+  width: 100%;
+  padding-top: 0.35em;
+  opacity: 0.85;
 }
 
 /* ===== ITENS DO MENU ===== */
@@ -997,13 +1035,14 @@ body {
 }
 
 /* ===== PRELOADER ===== */
+
 #preloader {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(ellipse at 50% 40%, #1a0d16 60%, #0a0a0a 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1012,13 +1051,91 @@ body {
   overflow: hidden;
 }
 
-#preloader::before {
-  content: '';
+#preloader .preloader-circles {
   position: absolute;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(249, 38, 107, 0.1) 0%, transparent 70%);
-  animation: rotate 20s linear infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#preloader .preloader-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  box-shadow: 0 0 32px 6px #ff4f8a44, 0 0 0 0 #fff0;
+  animation: preloader-spin 2.2s linear infinite;
+}
+#preloader .preloader-circle.pink {
+  width: 160px;
+  height: 160px;
+  border-top: 4px solid #ff4f8a;
+  border-right: 4px solid #ff4f8a;
+  border-bottom: 4px solid #ff4f8a44;
+  border-left: 4px solid #ff4f8a22;
+  box-shadow: 0 0 32px 6px #ff4f8a88, 0 0 0 0 #fff0;
+  animation-delay: 0s;
+}
+#preloader .preloader-circle.white {
+  width: 110px;
+  height: 110px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff4;
+  border-bottom: 4px solid #fff2;
+  border-left: 4px solid #fff0;
+  box-shadow: 0 0 18px 2px #fff4, 0 0 0 0 #fff0;
+  animation-delay: 0.5s;
+}
+#preloader .preloader-circle.glow {
+  width: 140px;
+  height: 140px;
+  border-top: 4px solid #ff4f8a88;
+  border-right: 4px solid #ff4f8a44;
+  border-bottom: 4px solid #ff4f8a22;
+  border-left: 4px solid #fff0;
+  box-shadow: 0 0 40px 10px #ff4f8a55, 0 0 0 0 #fff0;
+  animation-delay: 1s;
+}
+
+@keyframes preloader-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#preloader .preloader-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 120px;
+}
+
+#preloader .preloader-title {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff4f8a 30%, #fff 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 18px #ff4f8a55, 0 0 40px #fff2;
+}
+
+#preloader .preloader-subtitle {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #b0aeb3;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+  margin-top: 0.2em;
+  text-shadow: 0 0 8px #ff4f8a33;
 }
 
 @keyframes rotate {
@@ -1382,7 +1499,7 @@ body {
   
   .header {
 
-    background: transparent
+    background: transparent;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(249, 38, 107, 0.2);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -2798,18 +2915,16 @@ body {
   line-height: 1.7;
   margin: 15px 0 0 0;
 }
-  margin-bottom: 12px;
-  font-weight: 400;
-}
+
 
 .faq-answer p:last-child {
   margin-bottom: 0;
-}
+
 
 .faq-answer strong {
   color: var(--primary);
   font-weight: 700;
-}
+
 
 .faq-answer ul {
   list-style: none;

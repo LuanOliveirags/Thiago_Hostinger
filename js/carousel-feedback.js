@@ -1,3 +1,18 @@
+// ====================================================
+// carousel-feedback.js - Carrossel de feedbacks de alunas
+// Objetivo: Exibir prints de feedbacks em carrossel interativo com barra de progresso e modal
+//
+// Etapa 3: Scripts e interações
+// - Cada função está comentada para facilitar manutenção
+// - Não altere a lógica sem necessidade
+//
+// Principais funções:
+//   3.1 Inicialização do carrossel
+//   3.2 Renderização dos cards
+//   3.3 Barra de progresso e dots
+//   3.4 Modal de imagem ampliada
+//   3.5 Auto-slide e navegação
+// ====================================================
 const feedbackPrints = [
   'img/F_1.PNG', 'img/F_2.PNG', 'img/F_3.jpeg', 'img/F_4.PNG', 'img/F_5.PNG',
   'img/F_6.PNG', 'img/F_7.PNG', 'img/F_8.PNG', 'img/F_9.PNG', 'img/F_10.jpeg',
