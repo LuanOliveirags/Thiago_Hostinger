@@ -16,20 +16,39 @@ function initFeedbackGallery() {
 
   if (!deck || !prevBtn || !nextBtn) return;
 
+  // Criar barra de progresso
+  const progressContainer = document.createElement('div');
+  progressContainer.className = 'feedback-progress-container';
+  progressContainer.innerHTML = `
+    <div class="feedback-progress-bar">
+      <div class="feedback-progress-fill" id="feedbackProgressFill"></div>
+    </div>
+    <div class="feedback-progress-dots" id="feedbackProgressDots"></div>
+  `;
+  document.querySelector('#feedbacks .container').appendChild(progressContainer);
+
+  const progressFill = document.getElementById('feedbackProgressFill');
+  const progressDots = document.getElementById('feedbackProgressDots');
+
+  // Criar dots de progresso
+  feedbackPrints.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.className = 'feedback-progress-dot';
+    if (index === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToIndex(index));
+    progressDots.appendChild(dot);
+  });
+
   let currentIndex = 0;
   let autoSlide = null;
-  let startPointerX = null;
 
   const total = feedbackPrints.length;
 
   const normalize = (index) => (index + total) % total;
 
-  const createCardMarkup = (src, position, altText) => {
+  const createCardMarkup = (src, altText) => {
     const article = document.createElement('article');
-    article.className = 'feedback-card';
-    if (position === 0) article.classList.add('active');
-    if (position === -1) article.classList.add('prev');
-    if (position === 1) article.classList.add('next');
+    article.className = 'feedback-card active';
     article.innerHTML = `
       <div class="feedback-card__image">
         <img src="${src}" alt="${altText}" loading="lazy">
@@ -39,16 +58,35 @@ function initFeedbackGallery() {
   };
 
   const renderDeck = () => {
-    deck.innerHTML = '';
-    const positions = total === 1 ? [0] : total === 2 ? [-1, 0] : [-1, 0, 1];
-    positions.forEach((offset) => {
-      const normalizedIndex = normalize(currentIndex + offset);
+    // Fade out
+    deck.style.opacity = '0';
+    
+    setTimeout(() => {
+      deck.innerHTML = '';
       const card = createCardMarkup(
-        feedbackPrints[normalizedIndex],
-        offset,
-        `Print de feedback ${normalizedIndex + 1}`
+        feedbackPrints[currentIndex],
+        `Print de feedback ${currentIndex + 1}`
       );
       deck.appendChild(card);
+      
+      // Atualizar barra de progresso
+      updateProgress();
+      
+      // Fade in
+      setTimeout(() => {
+        deck.style.opacity = '1';
+      }, 50);
+    }, 300);
+  };
+
+  const updateProgress = () => {
+    const percentage = ((currentIndex + 1) / total) * 100;
+    if (progressFill) progressFill.style.width = percentage + '%';
+    
+    // Atualizar dots
+    const dots = progressDots.querySelectorAll('.feedback-progress-dot');
+    dots.forEach((dot, index) => {
+      dot.classList.toggle('active', index === currentIndex);
     });
   };
 
@@ -63,28 +101,11 @@ function initFeedbackGallery() {
 
   const restartAutoSlide = () => {
     if (autoSlide) clearInterval(autoSlide);
-    autoSlide = setInterval(showNext, 5000);
+    autoSlide = setInterval(showNext, 4000);
   };
 
   prevBtn.addEventListener('click', showPrev);
   nextBtn.addEventListener('click', showNext);
-
-  deck.addEventListener('pointerdown', (event) => {
-    startPointerX = event.clientX;
-  });
-
-  deck.addEventListener('pointerup', (event) => {
-    if (startPointerX === null) return;
-    const delta = event.clientX - startPointerX;
-    if (Math.abs(delta) > 60) {
-      delta < 0 ? showNext() : showPrev();
-    }
-    startPointerX = null;
-  });
-
-  deck.addEventListener('pointerleave', () => {
-    startPointerX = null;
-  });
 
   deck.addEventListener('click', (event) => {
     const img = event.target.closest('.feedback-card__image img');
@@ -123,6 +144,9 @@ function initFeedbackGallery() {
     });
   }
 
+  // Inicialização
+  deck.style.transition = 'opacity 0.3s ease';
   renderDeck();
   restartAutoSlide();
 }
+

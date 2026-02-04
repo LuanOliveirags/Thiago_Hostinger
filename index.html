@@ -18,6 +18,9 @@
             <div class="loader-ring"></div>
             <div class="loader-ring"></div>
             <div class="loader-ring"></div>
+            <div class="loader-icon">
+                <ion-icon name="barbell-outline"></ion-icon>
+            </div>
             <h2>Thiago Bazillio</h2>
             <p>Consultoria Online</p>
         </div>
@@ -47,7 +50,9 @@
                 <li><a href="#faq">FAQ</a></li>
             </ul>
         </nav>
-    </header>           
+        <div class="menu-overlay" id="menuOverlay"></div>
+    </header>
+           
 
     <!-- SECTION 1 - HERO -->
     <section class="hero-section" id="inicio">
@@ -120,24 +125,29 @@
 
     <!-- SECTION - INFORMAÇÕES S_INFO -->
     <section class="info-section" id="info-simetria">
-        <div class="container info-simetria-container" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap; margin-top: 48px; background: linear-gradient(90deg, #fff6fa 60%, #f9f9f9 100%); border-radius: 18px; box-shadow: 0 2px 24px rgba(209,59,123,0.07); padding: 32px 18px;">
-                <div class="info-simetria-note" style="width:100%; margin-bottom:18px; text-align: center;">
-                    <p style="font-size:1.08em; color:#333; line-height:1.5; margin:0 0 10px 0;">Um dos motivos de você não evoluir nos seus treinos e não alcançar resultados absurdos está nas escolhas erradas de exercícios que talvez não sejam ideais para você no momento.<br>Isso pode te levar a alcançar um padrão corporal que você não deseja.</p>
-                    <p style="font-size:1.08em; color:#d13b7b; font-weight:700; margin:0;">Por outro lado minhas alunas estão conquistando físicos absurdos</p>
+        <div class="container">
+            <div class="info-simetria-note">
+                <p class="info-simetria-intro">Um dos motivos de você não evoluir nos seus treinos e não alcançar resultados absurdos está nas escolhas erradas de exercícios que talvez não sejam ideais para você no momento.<br>Isso pode te levar a alcançar um padrão corporal que você não deseja.</p>
+                <p class="info-simetria-highlight">Por outro lado minhas alunas estão conquistando físicos absurdos</p>
+            </div>
+            
+            <div class="info-simetria-content">
+                <div class="info-simetria-image">
+                    <img src="img/S_info.jpeg" alt="Resultados simétricos">
                 </div>
-                <img src="img/S_info.jpeg" alt="Resultados simétricos" style="max-width: 370px; width: 100%; border-radius: 18px; box-shadow: 0 4px 24px rgba(209,59,123,0.10);">
-                <div class="info-simetria-text" style="flex: 1; min-width: 260px;">
-                    <h3 style="margin-bottom: 18px; color: #d13b7b; font-size: 1.7em; font-weight: 700; letter-spacing: 0.5px;">Resultados simétricos e estratégicos</h3>
-                    <div style="background: #fff0f7; border-radius: 12px; padding: 22px 24px; box-shadow: 0 1px 12px rgba(209,59,123,0.09);">
-                        <p style="margin-bottom: 14px; font-weight: 700; color: #d13b7b; font-size: 1.08em;">Se você treina sem estratégia, não é só os resultados que demoram...</p>
-                        <ul style="list-style: none; padding-left: 0; font-size: 1.07em; color: #d13b7b;">
-                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="font-size: 1.3em; margin-right: 8px;">▲</span> Pode estar perdendo massa magra ao invés de ganhar!</li>
-                            <li style="margin-bottom: 10px; display: flex; align-items: center;"><span style="font-size: 1.3em; margin-right: 8px;">▲</span> Pode estar sobrecarregando articulações sem necessidade.</li>
-                            <li style="display: flex; align-items: center;"><span style="font-size: 1.3em; margin-right: 8px;">▲</span> Pode acabar com dores e sem ver mudanças reais no espelho.</li>
+                <div class="info-simetria-text">
+                    <h3>Resultados simétricos e estratégicos</h3>
+                    <div class="info-simetria-warning">
+                        <p class="warning-title">Se você treina sem estratégia, não é só os resultados que demoram...</p>
+                        <ul class="warning-list">
+                            <li><span>▲</span> Pode estar perdendo massa magra ao invés de ganhar!</li>
+                            <li><span>▲</span> Pode estar sobrecarregando articulações sem necessidade.</li>
+                            <li><span>▲</span> Pode acabar com dores e sem ver mudanças reais no espelho.</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- SECTION 3 - COMO FUNCIONA -->
@@ -214,50 +224,9 @@
                     </ul>
                     <a href="https://pages.mfitpersonal.com.br/index?acao=page&tipo=1&page=74445&isCheckout=true" target="_blank" class="plan-button">Contratar agora</a>
                 </div>
-         
-<!--
-                <br>
-                <br>
-                <div class="plan-card" id="consultoria-online">
-                    <h3>CONSULTORIA ON-LINE</h3>
-                    <div class="plan-price">
-                        <span class="currency">R$</span>
-                        <span class="amount">300</span>
-                        <span class="cents"></span>
-                    </div>
-                        <ul class="plan-features">
-                            <li>✔ Treino 100% personalizado</li>
-                            <li>✔ Foco em estética feminina</li>
-                            <li>✔ Entrega do treino em até 4 dias</li>
-                            <li>✔ Correção ou análise de execução dos exercícios através de vídeos que me enviarem pelo WhatsApp</li>
-                            <li>✔ Ajustes pontuais no treino</li>
-                            <li>✔ Suporte para tirar dúvidas</li>
-                        </ul>
-                    <a href="https://pages.mfitpersonal.com.br/index?acao=page&tipo=1&page=74445&isCheckout=true" target="_blank" class="plan-button">Contratar agora</a>
-                </div>
-            </div>
-        </div>-->
-    </section>
-
-    <!-- SECTION 5 - ESTATÍSTICAS 
-    <section class="stats-section">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="10">0</span>
-                    <span class="stat-plus">+</span>
-                    <p class="stat-label">Anos de Experiência</p>
-                </div>
-
-                <div class="stat-item">
-                    <span class="stat-number" data-target="100">0</span>
-                    <span class="stat-plus">%</span>
-                    <p class="stat-label">Resultados Comprovados</p>
-                </div>
             </div>
         </div>
     </section>
-    --> 
 
     <!-- SECTION 6 - RESULTADOS -->
     <section class="portfolio-section" id="resultados">
@@ -401,10 +370,53 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <img src="img/logo.png" width="50" alt="Thiago Bazillio" class="footer-logo">
-        <p>&copy; 2026 Thiago Bazillio - Treinador | Todos os direitos reservados</p>
-        <p> Desenvolvido por Luan Gs</p>
-        <p style="font-size: 0.85rem; margin-top: 10px; color: var(--gray);">prof_thiagobazilio@hotmail.com</p>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="img/logo.png" width="60" alt="Thiago Bazillio" class="footer-logo">
+                    <h3>Thiago Bazillio</h3>
+                    <p class="footer-tagline">Consultoria Online | Treinamento Feminino</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#inicio">Início</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#planos">Consultoria</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Conteúdo</h4>
+                        <ul>
+                            <li><a href="#resultados">Resultados</a></li>
+                            <li><a href="#feedbacks">Feedbacks</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#diferenciais">Diferenciais</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:prof_thiagobazilio@hotmail.com">prof_thiagobazilio@hotmail.com</a></li>
+                            <li><a href="https://wa.me/5511979891379" target="_blank">WhatsApp</a></li>
+                            <li><a href="https://www.instagram.com/thiagobazillio/" target="_blank">Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Thiago Bazillio - Treinador | Todos os direitos reservados</p>
+                <p class="footer-dev">Desenvolvido por <a href="#" target="_blank">Luan Gs</a></p>
+            </div>
+        </div>
     </footer>
 
     <!-- BOTÕES FLUTUANTES: WHATSAPP + INSTAGRAM -->

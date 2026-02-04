@@ -9,11 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
 function initMenuMobile() {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
+  const menuOverlay = document.getElementById('menuOverlay');
   
-  if (menuToggle && navMenu) {
+  if (menuToggle && navMenu && menuOverlay) {
+    // Toggle do menu
     menuToggle.addEventListener('click', function() {
       navMenu.classList.toggle('open');
       menuToggle.classList.toggle('active');
+      menuOverlay.classList.toggle('active');
+      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    });
+    
+    // Fecha o menu ao clicar no overlay
+    menuOverlay.addEventListener('click', function() {
+      navMenu.classList.remove('open');
+      menuToggle.classList.remove('active');
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
     });
     
     // Fecha o menu ao clicar em um link
@@ -21,6 +33,8 @@ function initMenuMobile() {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
         menuToggle.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
   }
