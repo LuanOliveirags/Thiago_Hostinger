@@ -690,7 +690,7 @@
   font-weight: 700;
   margin-bottom: 0.5rem;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .forwho-card:hover {
@@ -830,7 +830,7 @@
   color: #fff;
   letter-spacing: 0.18em;
   margin: 0 0 0.2em 0;
-  text-transform: uppercase;
+  text-transform: none;
   line-height: 1.05;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -842,7 +842,7 @@
   color: #fff;
   letter-spacing: 0.35em;
   margin: 0.1em 0 0 0;
-  text-transform: uppercase;
+  text-transform: none;
   font-weight: 400;
   text-align: center;
   font-family: 'Montserrat', Arial, sans-serif;
@@ -1289,7 +1289,7 @@ body {
   font-weight: 300;
   letter-spacing: 2px;
   animation: fadeInUp 1s ease-out 0.3s both;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 @keyframes fadeInUp {
@@ -2918,7 +2918,7 @@ body {
   display: inline-block;
   font-size: 0.75rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 0.8px;
   color: var(--primary);
   background: linear-gradient(135deg, rgba(249, 38, 107, 0.1), rgba(255, 79, 138, 0.1));
