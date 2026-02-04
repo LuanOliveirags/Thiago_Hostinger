@@ -12,12 +12,21 @@ function initMenuMobile() {
   const menuOverlay = document.getElementById('menuOverlay');
   
   if (menuToggle && navMenu && menuOverlay) {
-    // Toggle do menu
+    // Toggle do menu com o hamburguer
     menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('open');
-      menuToggle.classList.toggle('active');
-      menuOverlay.classList.toggle('active');
-      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+      const isOpen = navMenu.classList.contains('open');
+      
+      if (isOpen) {
+        navMenu.classList.remove('open');
+        menuToggle.classList.remove('active');
+        menuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      } else {
+        navMenu.classList.add('open');
+        menuToggle.classList.add('active');
+        menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
     });
     
     // Fecha o menu ao clicar no overlay
@@ -29,7 +38,8 @@ function initMenuMobile() {
     });
     
     // Fecha o menu ao clicar em um link
-    navMenu.querySelectorAll('a').forEach(link => {
+    const menuLinks = navMenu.querySelectorAll('.menu-items a');
+    menuLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
         menuToggle.classList.remove('active');
