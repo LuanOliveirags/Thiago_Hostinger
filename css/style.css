@@ -1096,7 +1096,7 @@ body {
 .header {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 105%;
   background: transparent;
   backdrop-filter: none;
   border-bottom: none;
