@@ -1,38 +1,18 @@
-
-<!--
-  =============================================
-  Etapa 1: Estrutura do HTML
-  index.html - Página principal do site
-  Objetivo: Estruturar o conteúdo, navegação e seções do site de consultoria online.
-  =============================================
--->
 <!DOCTYPE html>
+<!--
+    ETAPA 1 · Estrutura base do documento HTML responsável por renderizar toda a landing page.
+    Mantém apenas um ponto de entrada e referencia diretamente os arquivos essenciais do projeto.
+-->
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiago Bazillio - Treinador| Treinamento Feminino</title>
-    <link rel="icon" href="img/icon.ico" type="image/png">
-    <!--
-      Etapa 2: Estilos CSS
-      Carrega o CSS principal do site
-    -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts para tipografia personalizada -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Raleway:wght@300&display=swap" rel="stylesheet"/>
-    <!--
-      Etapa 3: Scripts e interações
-      Carrega o script do carrossel de feedbacks
-    -->
-    <script src="js/carousel-feedback.js" defer></script>
+    <title>Luan Gs - Analista de Sistemas</title>
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <!--
-      Etapa 1.1: Preloader
-      Exibe animação de carregamento enquanto a página é processada
-    -->
-
+<body>    
         <!--
             Preloader inspirado no logo neon
         -->
@@ -53,10 +33,7 @@
             </div>
         </div>
 
-    <!--
-      Etapa 1.2: Cabeçalho e navegação principal
-      Inclui menu mobile acessível e navegação por âncoras
-    -->
+    <!-- ETAPA 2 · Cabeçalho fixo com navegação -->
     <header class="header">
         <nav class="navigation" aria-label="Navegação principal">
             <a href="#inicio" class="logo" aria-label="Ir para o início do site"></a>
@@ -86,8 +63,6 @@
         </nav>
         <div class="menu-overlay" id="menuOverlay"></div>
     </header>
-           
-
 
     <!--
       Etapa 1.3: Seção principal (Hero)
@@ -115,8 +90,7 @@
     </section>
    
 
-
-    <!--
+ <!--
       Etapa 1.4: Seção "Para quem é"
       Explica o público-alvo da consultoria
     -->
@@ -305,7 +279,7 @@
                     <h3>Plano Platinum</h3>
                     <div class="plan-price">
                         <span class="currency">R$</span>
-                        <span class="amount">550</span>
+                        <span class="amount">500</span>
                         <span class="cents">,00</span>
                     </div>
                     <ul class="plan-features">
@@ -461,7 +435,24 @@
         </div>
     </section>
 
-    <!-- SECTION 8 - CONTATO removida (Instagram agora em botão flutuante) -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!--
@@ -472,7 +463,7 @@
         <div class="footer-container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img src="img/logo.png" width="100" alt="Thiago Bazillio" class="footer-logo">
+                    <img src="img/logo.png" alt="Thiago Bazillio" class="footer-logo">
                     <!-- Botões de contato ao lado do logo -->
                     <div class="footer-social">
                         <a href="https://www.instagram.com/thiagobazillio/" target="_blank" class="footer-instagram" title="Siga no Instagram" aria-label="Instagram">
@@ -530,6 +521,7 @@
       Carrega scripts JS principais e ícones
     -->
     <script src="js/script-index.js"></script>
+    <script src="js/carousel-feedback.js"></script>
     <!-- Modal de imagem em tela cheia é controlado por JS -->
     <div id="modal-imagem" style="display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(10,10,10,0.97);align-items:center;justify-content:center;transition:opacity 0.3s;pointer-events:auto;">
         <span id="fechar-modal-imagem" style="position:absolute;top:30px;right:40px;font-size:3rem;color:#ff2e6e;cursor:pointer;font-family:sans-serif;z-index:20001;user-select:none;">&times;</span>
@@ -542,3 +534,4 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+

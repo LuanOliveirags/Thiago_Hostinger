@@ -1,0 +1,106 @@
+/* ===== PARA QUEM É ESSA CONSULTORIA ===== */
+.forwho-title {
+  color: var(--primary);
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+.forwho-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2.2rem;
+}
+
+.forwho-card {
+  background: #181818;
+  border-radius: 18px;
+  box-shadow: 0 0 18px 0 #f9266b33, 0 0 0 2px #ff4f8a22;
+  padding: 1.5rem 1.3rem 1.2rem 1.3rem;
+  min-width: 220px;
+  max-width: 270px;
+  color: #fff;
+  font-size: 1.08rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  text-align: center;
+}
+.forwho-card-title {
+  color: var(--primary-light);
+  font-size: 1.13rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
+
+.forwho-card:hover {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b55;
+  transform: translateY(-6px) scale(1.04);
+}
+.forwho-card.active-highlight {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  transform: translateY(-6px) scale(1.07);
+  z-index: 2;
+  border: 2px solid var(--primary-light);
+  background: #1a0d16;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+}
+.forwho-bad-modern.active-highlight, .forwho-good-modern.active-highlight {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  transform: translateY(-6px) scale(1.07);
+  z-index: 2;
+  border: 2px solid var(--primary-light);
+  background: #1a0d16;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+}
+.forwho-icon {
+  display: none;
+}
+
+.forwho-diferenciais-modern {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.forwho-bad-modern, .forwho-good-modern {
+  background: #181818;
+  border-radius: 14px;
+  box-shadow: 0 0 12px #fff2;
+  padding: 1.2rem 1.1rem 1.1rem 1.1rem;
+  min-width: 220px;
+  max-width: 270px;
+  color: #fff;
+  font-size: 1.01rem;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.forwho-bad-title {
+  color: #ff2e6e;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.forwho-good-title {
+  color: var(--primary);
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+.forwho-bad-modern ul, .forwho-good-modern ul {
+  padding-left: 1.1rem;
+  margin: 0;
+}
+.forwho-bad-modern li, .forwho-good-modern li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}

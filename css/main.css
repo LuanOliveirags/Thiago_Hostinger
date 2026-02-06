@@ -1,0 +1,18 @@
+/* Ordem obrigatória: base, layout, components, sections, responsivo */
+@import url("base/style.css");
+@import url("base/sec_generic.css");
+@import url("layout/header_hero.css");
+@import url("layout/menu.css");
+@import url("layout/rodape.css");
+@import url("components/preloader.css");
+@import url("components/modal_img.css");
+@import url("sections/comofunciona.css");
+@import url("sections/consultoria.css");
+@import url("sections/diferenciais.css");
+@import url("sections/faq.css");
+@import url("sections/feedback.css");
+@import url("sections/planos.css");
+@import url("sections/resultados.css");
+@import url("sections/simetria.css");
+@import url("sections/sobre.css");
+@import url("base/responsive.css");
