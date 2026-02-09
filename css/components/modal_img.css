@@ -1,3 +1,31 @@
+/* Destaques com active-highlight */
+.portfolio-item.active-highlight {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  transform: translateY(-6px) scale(1.07);
+  z-index: 2;
+  border: 2px solid var(--primary-light);
+  background: #1a0d16;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+  position: relative;
+}
+.diferenciais-list li.active-highlight {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  transform: translateY(-6px) scale(1.07);
+  z-index: 2;
+  border: 2px solid var(--primary-light);
+  background: #1a0d16;
+  color: #fff !important;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s, color 0.4s;
+  position: relative;
+}
+.process-card.active-highlight {
+  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  transform: translateY(-6px) scale(1.07);
+  z-index: 2;
+  border: 2px solid var(--primary-light);
+  background: #1a0d16;
+  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+}
 /* ===== MODAL DE IMAGEM EM TELA CHEIA ===== */
 #modal-imagem {
   display: none;
