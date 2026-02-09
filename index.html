@@ -37,15 +37,34 @@
     <header class="header">
         <nav class="navigation" aria-label="Navegação principal">
             <a href="#inicio" class="logo" aria-label="Ir para o início do site"></a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="navMenu" aria-expanded="false">
+
+            <!-- Menu Desktop -->
+            <div class="nav-menu-desktop" id="navMenuDesktop">
+                <ul class="menu-items">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#para-quem-e">Para</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#info-simetria">Simetria</a></li>
+                    <li><a href="#como-funciona">Funcionamento</a></li>
+                    <li><a href="#diferenciais">Diferenciais</a></li>
+                    <li><a href="#planos">Consultoria</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                    <li><a href="#feedbacks">Feedbacks</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </div>
+
+            <!-- Menu Mobile -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-controls="navMenuMobile" aria-expanded="false">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
-            <div class="nav-menu" id="navMenu">
+            <div class="nav-menu-mobile" id="navMenuMobile">
                 <div class="menu-brand">
-                    <h2 class="menu-brand-name">Thiago Bazillio</h2>
-                    <p class="menu-brand-subtitle">Treinador</p>
+                    <h2 class="menu-brand-name">THIAGO</h2>
+                    <h2 class="menu-brand-name">BAZILLIO</h2>
+                    <p class="menu-brand-subtitle">TREINADOR</p>
                 </div>
                 <ul class="menu-items">
                     <li><a href="#inicio">Início</a></li>
@@ -440,21 +459,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--
       Etapa 1.13: Rodapé (Footer)
       Informações institucionais, navegação e contatos
@@ -520,8 +524,7 @@
       Etapa 1.15: Scripts finais
       Carrega scripts JS principais e ícones
     -->
-    <script src="js/script-index.js"></script>
-    <script src="js/carousel-feedback.js"></script>
+    <script type="module" src="js/main.js"></script>
     <!-- Modal de imagem em tela cheia é controlado por JS -->
     <div id="modal-imagem" style="display:none;position:fixed;z-index:99999;top:0;left:0;width:100vw;height:100vh;background:rgba(10,10,10,0.97);align-items:center;justify-content:center;transition:opacity 0.3s;pointer-events:auto;">
         <span id="fechar-modal-imagem" style="position:absolute;top:30px;right:40px;font-size:3rem;color:#ff2e6e;cursor:pointer;font-family:sans-serif;z-index:20001;user-select:none;">&times;</span>
