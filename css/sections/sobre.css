@@ -4,7 +4,19 @@
   background: #fff;
   box-shadow: 0 2px 24px #0001;
 }
-.about-section .section-title,
+.about-section .section-title{
+    position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #ff2e6e 0%, #ff5a8f 50%, #f9266b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #ff5a8f22;
+},
 .about-section .about-content,
 .about-section .about-content p {
 
