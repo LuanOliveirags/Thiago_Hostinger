@@ -1,10 +1,15 @@
 /* ===== PARA QUEM É ESSA CONSULTORIA ===== */
-.forwho-title {
-  color: var(--primary);
-  font-size: 2.1rem;
-  font-weight: 700;
-  margin-bottom: 2.2rem;
-  text-align: center;
+.forwho-section {
+  background: white;
+  padding: 50px 0;
+  border-radius: 30px;
+  box-shadow: 0 4px 32px #ff2ee311;
+  border: 3px solid #ff2edc33;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.forwho-section:hover {
+  border-color: #ff2e6e;
+  box-shadow: 0 8px 32px #ff2e6e33;
 }
 
 .forwho-cards {
@@ -16,14 +21,14 @@
 }
 
 .forwho-card {
-  background: #181818;
+  background: #000000d7;
   border-radius: 18px;
-  box-shadow: 0 0 18px 0 #f9266b33, 0 0 0 2px #ff4f8a22;
-  padding: 1.5rem 1.3rem 1.2rem 1.3rem;
-  min-width: 220px;
-  max-width: 270px;
-  color: #fff;
-  font-size: 1.08rem;
+  box-shadow: 0 0 18px 0 #e620e633, 0 0 0 2px #ff4f8a22;
+  padding: 1.7rem 1.5rem 1.2rem 1.3rem;
+  min-width: 250px;
+  max-width: 300px;
+  color: #ffffff;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +39,7 @@
   text-align: center;
 }
 .forwho-card-title {
-  color: var(--primary-light);
+  color: #ff4f8a;
   font-size: 1.13rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
