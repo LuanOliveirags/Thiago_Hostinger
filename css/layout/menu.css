@@ -1,20 +1,5 @@
 /* ===== MENU DESKTOP ===== */
 /* ===== MENU DESKTOP MELHORADO ===== */
-.nav-menu-desktop {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100vw;
-  max-width: 100vw;
-  background: rgba(0,0,0,0.10);
-  box-shadow: none;
-  padding: 0 0 0 40px;
-  margin: 0;
-  min-height: 120px;
-  position: relative;
-  z-index: 10;
-}
 
 .nav-menu-desktop .menu-brand {
   display: flex;
@@ -29,14 +14,14 @@
 .nav-menu-desktop .menu-brand-name {
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 2px;
   margin-bottom: 0.1em;
   text-shadow: 0 2px 12px #000a;
 }
 .nav-menu-desktop .menu-brand-subtitle {
   font-size: 1.1rem;
-  color: #fff;
+  color: #e424ca;
   opacity: 0.7;
   letter-spacing: 8px;
   margin-top: 0.2em;
@@ -62,7 +47,7 @@
   list-style: none;
 }
 .nav-menu-desktop .menu-items li a {
-  color: #fff;
+  color: #f329e9;
   font-size: 1.08rem;
   font-weight: 400;
   padding: 0.5rem 0.7rem;
@@ -79,7 +64,7 @@
 .nav-menu-desktop .menu-items li a:focus {
   color: #ff2e6e;
   background: rgba(255,46,110,0.07);
-  padding-left: 1.2rem;
+  padding-left: 1.2rem;     
 }
 .nav-menu-desktop .menu-toggle {
   display: none !important;
@@ -115,9 +100,9 @@
     width: 100%;
     max-width: 370px;
     height: 100vh;
-    background: linear-gradient(135deg, rgba(20, 10, 15, 0.97) 0%, rgba(10, 5, 10, 0.99) 100%);
-    border-left: 2px solid #ff2e6e33;
-    box-shadow: -10px 0 40px rgba(0,0,0,0.7), 0 0 0 1px #ff2e6e11;
+    background: rgba(0, 0, 0, 0.671);
+    border-left: 2px solid #f7ceda33;
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7), 0 0 0 1px #cf194f11;
     transform: translateX(100%);
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 0;
@@ -148,7 +133,7 @@
   }
   .nav-menu-mobile .menu-items li a {
     display: block;
-    color: #fff;
+    color: #ff4f8a;
     font-size: 1.08rem;
     font-weight: 400;
     padding: 14px 0 14px 18px;
@@ -160,9 +145,8 @@
   }
   .nav-menu-mobile .menu-items li a:hover,
   .nav-menu-mobile .menu-items li a:focus {
-    color: #ff2e6e;
-    background: rgba(255,46,110,0.07);
-    padding-left: 28px;
+    color: #ff4f8a;
+    background: #ddd3d6
   }
   .nav-menu-mobile.open .menu-items li:nth-child(1) { animation-delay: 0.1s; }
   .nav-menu-mobile.open .menu-items li:nth-child(2) { animation-delay: 0.15s; }
@@ -334,9 +318,10 @@
   }
 }
 
+
 .menu-items li a {
   display: block;
-  color: rgba(255, 255, 255, 0.85);
+  color: #7ee8fa;
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 400;
@@ -354,12 +339,12 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #d13b7b, #ff5a8f);
+  background: linear-gradient(90deg, #ffffff, #ffffff);
   transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-items li a:hover {
-  color: #ff5a8f;
+  color: #ffffff;
   transform: translateX(10px);
   padding-left: 10px;
 }

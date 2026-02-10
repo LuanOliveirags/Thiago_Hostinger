@@ -1,0 +1,43 @@
+/* ===== PALETTE SELECTOR (PERSONALIZAÇÃO DE CORES) ===== */
+.palette-selector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.palette-selector span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+}
+.palette-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin: 0 0.1rem;
+}
+.palette-btn:focus, .palette-btn.active {
+  border: 2.5px solid #e85ca8;
+  transform: scale(1.12);
+}
+@media (max-width: 600px) {
+  .palette-selector {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .palette-btn {
+    width: 28px;
+    height: 28px;
+  }
+  .palette-selector span {
+    font-size: 0.95rem;
+  }
+}

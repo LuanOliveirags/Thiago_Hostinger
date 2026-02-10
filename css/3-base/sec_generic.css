@@ -1,0 +1,68 @@
+/*
+=========================================================
+ETAPA 2 · ESTILIZAÇÃO GLOBAL DO SITE
+- Define tokens de cor, tipografia e efeitos utilizados em todas as seções.
+- Agrupa os estilos por etapas para facilitar manutenção sem alterar o layout.
+=========================================================
+*/
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+:root {
+  --primary: #f9266b;
+  --primary-dark: #c81d4e;
+  --primary-light: #ff4f8a;
+  --dark: #0a0a0a;
+  --darker: #050505;
+  --light: #ffffff;
+  --gray: #a0a0a0;
+  --gray-dark: #333333;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #ffffff;
+}
+
+body {
+  font-family: 'Montserrat', 'Raleway', sans-serif;
+  background: linear-gradient(180deg, var(--dark) 0%, var(--dark) 90%, #ffffff 90%, #ffffff 100%);
+  color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), rgba(255, 255, 255, 0.5));
+  border-radius: 5px;
+  border: 2px solid var(--dark);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+

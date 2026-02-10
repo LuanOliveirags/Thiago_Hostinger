@@ -1,0 +1,189 @@
+
+
+/* ===== ETAPA 8 · RODAPÉ ===== */
+.footer {
+  background: #ffffff;
+  padding: 40px 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  color: #1c1c1c;
+}
+
+.footer-logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+}
+
+/* ===== ETAPA 9 · CONTATOS FLUTUANTES ===== */
+.whatsapp-float,
+.instagram-float {
+  position: fixed;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.whatsapp-float {
+  bottom: 30px;
+  background: linear-gradient(135deg, #00fc0d, #35c54d);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.4);
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float ion-icon {
+  font-size: 2.5rem;
+  color: var(--light);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 40px rgba(255, 255, 255, 0.6);
+}
+
+.instagram-float {
+  bottom: 105px;
+  background: radial-gradient(circle at 30% 30%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 100%);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.instagram-float ion-icon {
+  font-size: 2.2rem;
+  color: #ffffff;
+}
+
+.instagram-float:hover {
+  transform: scale(1.08) rotate(-6deg);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+@media (max-width: 900px) {
+  .navigation { padding: 0.8rem 1.5rem; }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    background: linear-gradient(180deg, rgba(7, 7, 7, 0.9), rgba(16, 24, 32, 0.9));
+    flex-direction: column;
+    align-items: stretch;
+    padding: 90px 20px 30px;
+    gap: 0.5rem;
+    box-shadow: -4px 0 32px rgba(0, 0, 0, 0.8);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1001;
+  }
+
+  .nav-menu.open { transform: translateX(0); }
+
+  .nav-menu li {
+    width: 100%;
+    opacity: 0;
+    transform: translateX(30px);
+    animation: slideInMenu 0.4s ease forwards;
+  }
+
+  .nav-menu.open li:nth-child(1) { animation-delay: 0.05s; }
+  .nav-menu.open li:nth-child(2) { animation-delay: 0.1s; }
+  .nav-menu.open li:nth-child(3) { animation-delay: 0.15s; }
+  .nav-menu.open li:nth-child(4) { animation-delay: 0.2s; }
+  .nav-menu.open li:nth-child(5) { animation-delay: 0.25s; }
+
+  .menu-toggle {
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid #d13b7b;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section { background-attachment: scroll; }
+  .brand-name { font-size: clamp(1.9rem, 9vw, 2.5rem); --brand-spacing: 0.24rem; }
+  .brand-subtitle { font-size: 0.8rem; letter-spacing: 0.28rem; margin-bottom: 2.5rem; }
+  .container { padding: 0 1.5rem; }
+  .process-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .plans-grid { grid-template-columns: 1fr; }
+  .results-carousel { padding: 0 50px; }
+  .carousel-btn { width: 40px; height: 40px; font-size: 1.5rem; }
+  .whatsapp-float,
+  .instagram-float { width: 60px; height: 60px; right: 20px; }
+  .instagram-float { bottom: 90px; }
+  .whatsapp-float { bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .section-title { font-size: 1.2rem; }
+  .process-number { width: 60px; height: 60px; }
+  .results-carousel { padding: 0 40px; }
+  .whatsapp-float,
+  .instagram-float { width: 55px; height: 55px; right: 15px; }
+  .instagram-float { bottom: 80px; }
+  .whatsapp-float { bottom: 15px; }
+}
+
+@keyframes slideInMenu {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  100% { width: var(--brand-type-final); }
+}
+
+@keyframes subtitleReveal {
+  0% { opacity: 0; transform: translateY(14px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-whatsapp {
+  0% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+  50% {
+    box-shadow: 0 8px 30px rgba(255, 255, 255, 0.6),
+                0 0 0 10px rgba(37, 211, 102, 0.2),
+                0 0 0 20px rgba(37, 211, 102, 0.1);
+  }
+  100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.4); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.9; }
+}
+
+@keyframes sweep { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes orbitPulse { 0% { transform: scale(0.98); opacity: 0.6; } 50% { transform: scale(1); opacity: 1; } 100% { transform: scale(0.98); opacity: 0.6; } }
+@keyframes breathe { 0% { opacity: 0.25; transform: scale(0.85); } 60% { opacity: 0.8; transform: scale(1); } 100% { opacity: 0.25; transform: scale(0.9); } }
+@keyframes corePulse { 0% { transform: scale(0.9); opacity: 0.7; } 50% { transform: scale(1.15); opacity: 1; } 100% { transform: scale(0.9); opacity: 0.7; } }
+@keyframes cometOrbit { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes shimmer { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }

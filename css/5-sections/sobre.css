@@ -1,4 +1,31 @@
-/* ===== PROCESS SECTION ===== */
+/* Garante que a seção sobre só comece após o hero sair da tela (efeito sticky) */
+.about-section {
+  margin-top: -1px;
+  padding-top: 100vh;
+  background: #fff;
+  position: relative;
+  z-index: 20;
+}
+/* ===== ETAPA 4 · SOBRE ===== */
+.about-section {
+  padding: 100px 2rem;
+  background: #ffffff;
+  color: #222222;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.05);
+}
+
+.about-section .section-title { color: var(--primary); }
+
+.about-content p {
+  max-width: 700px;
+  margin: 0 auto 1.7rem;
+  font-size: 1.13rem;
+  line-height: 1.85;
+  text-align: center;
+  color: #222222;
+}
+
+/* ===== ETAPA 5 · PROCESSO ===== */
 .process-section {
   padding: 100px 2rem;
   background: var(--dark);
@@ -8,8 +35,8 @@
   text-align: center;
   font-size: 1.1rem;
   color: var(--gray);
-  margin: -2rem auto 0;
-  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .process-grid {
@@ -21,17 +48,17 @@
 
 .process-card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(0, 247, 255, 0.1);
   border-radius: 15px;
   padding: 40px 30px;
   text-align: center;
-  transition: var(--transition);
   position: relative;
   overflow: hidden;
+  transition: var(--transition);
 }
 
 .process-card::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -41,40 +68,36 @@
   transition: left 0.6s ease;
 }
 
-.process-card:hover::before {
-  left: 100%;
-}
+.process-card:hover::before { left: 100%; }
 
 .process-card:hover {
   border-color: var(--primary);
   transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 247, 255, 0.2);
 }
 
 .process-number {
   width: 70px;
   height: 70px;
-  background: linear-gradient(135deg, var(--primary), rgba(0, 247, 255, 0.7));
+  margin: 0 auto 25px;
   border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), rgba(0, 247, 255, 0.7));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
   color: var(--dark);
-  margin: 0 auto 25px;
 }
 
 .process-card h3 {
   font-size: 1.3rem;
   margin-bottom: 15px;
   color: var(--light);
-  font-weight: 600;
 }
 
 .process-card p {
   font-size: 1rem;
   color: var(--gray);
   line-height: 1.8;
-  font-weight: 300;
 }

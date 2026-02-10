@@ -1,0 +1,102 @@
+/* ===== ETAPA 7 · RESULTADOS ===== */
+.portfolio-section {
+  padding: 100px 2rem;
+  background: var(--darker);
+}
+
+.results-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--gray);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.results-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 0 60px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  aspect-ratio: 9 / 16;
+  display: none;
+}
+
+.carousel-slide.active { display: block; }
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.8rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: var(--transition);
+  opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-btn:hover {
+  background: rgba(209, 59, 123, 0.7);
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 4px 16px rgba(209, 59, 123, 0.4);
+}
+
+.carousel-prev { left: 0; }
+.carousel-next { right: 0; }
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: var(--transition);
+  border: 2px solid transparent;
+}
+
+.dot.active {
+  background: linear-gradient(135deg, #d13b7b, #ff2e6e);
+  width: 32px;
+  border-radius: 6px;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(209, 59, 123, 0.6);
+}

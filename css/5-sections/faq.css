@@ -26,6 +26,25 @@
   opacity: 0.8;
 }
 
+.faq-section .section-title {
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  color: #000000;
+}
+
+.faq-section .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), #ff5a8f);
+  border-radius: 2px;
+}
+
 .faq-intro {
   text-align: center;
   font-size: 1.15rem;
