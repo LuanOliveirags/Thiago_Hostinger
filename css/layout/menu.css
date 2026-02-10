@@ -1,7 +1,6 @@
 /* ===== MENU DESKTOP ===== */
 /* ===== MENU DESKTOP MELHORADO ===== */
-.nav-menu-desktop {
-}
+
 
 .nav-menu-desktop .menu-brand {
   display: flex;
@@ -149,6 +148,10 @@
   .nav-menu-mobile .menu-items li a:focus {
     color: #ff4f8a;
     background: #ddd3d6
+/* Removido conflito de merge */
+/* Removido conflito de merge */
+    padding-left: 28px;
+/* Removido conflito de merge */
   }
   .nav-menu-mobile.open .menu-items li:nth-child(1) { animation-delay: 0.1s; }
   .nav-menu-mobile.open .menu-items li:nth-child(2) { animation-delay: 0.15s; }
