@@ -1,122 +1,99 @@
-/* ===== SKILLS SECTION ===== */
+/* =============================
+   PLANOS DE CONSULTORIA - VISUAL MODERNO
+   ============================= */
+
 .skills-section {
-  padding: 100px 2rem;
-  background: var(--darker);
+  background: white;
+  padding: 50px 0;
+  border-radius: 30px;
+  box-shadow: 0 4px 32px #ff2e6e11;
+  border: 3px solid #ff2e6e33;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-
-.skill-card-modern {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--primary-light);
-  border-radius: 15px;
-  padding: 35px 25px;
+.section-title {
+  color: #ff2e6e;
+  font-size: 2rem;
+  font-weight: 900;
   text-align: center;
-  transition: var(--transition);
-  cursor: pointer;
+  margin-bottom: 2.2rem;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 12px #ffb6d5, 0 1px 0 #030303;
+  position: relative;
 }
 
-.skill-card-modern:hover {
-  border-color: var(--primary);
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px var(--primary-light);
-  background: var(--primary-dark);
-}
-
-.skill-image {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
-  filter: brightness(1.1);
-  transition: var(--transition);
-}
-
-.skill-card-modern:hover .skill-image {
-  transform: scale(1.15) rotate(5deg);
-  filter: brightness(1.3) drop-shadow(0 0 15px var(--primary-light));
-}
-
-.skill-card-modern h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: var(--light);
-  font-weight: 600;
-}
-
-.skill-card-modern p {
-  font-size: 0.95rem;
-  color: var(--gray);
-  font-weight: 300;
-}
-
-
-
-
-
-
-
-/* ===== PLANOS DE TREINO ===== */
 .plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2.5rem;
-  margin-top: 3rem;
+  flex-wrap: wrap;
 }
 
 .plan-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 40px 30px;
+  background: #000000;
+  border: 2.5px solid #ff2e6e33;
+  border-radius: 22px;
+  padding: 48px 36px;
   text-align: center;
-  transition: var(--transition);
+  transition: box-shadow 0.3s, border 0.3s, transform 0.3s;
   position: relative;
   overflow: visible;
+  box-shadow: 0 8px 32px rgba(255,46,110,0.10);
+  flex: 1 1 340px;
+  animation: fadeInCard 1.1s cubic-bezier(.77,0,.18,1) both;
+}
+
+@keyframes fadeInCard {
+  0% { opacity: 0; transform: scale(0.95) translateY(40px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .plan-card.featured {
-  border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.05);
-  transform: scale(1.05);
-  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.25);
+  border-color: #ff2e6e;
+  background: linear-gradient(120deg, #fff 80%, #ffe0ef 100%);
+  transform: scale(1.04);
+  box-shadow: 0 20px 50px #ff2e6e22;
 }
 
-.plan-badge {
+.plan-card.featured .plan-badge {
+  background: linear-gradient(90deg, #ff2e6e, #ff5a8f);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.1rem;
+  padding: 10px 32px;
+  border-radius: 20px;
   position: absolute;
-  top: -15px;
+  top: -22px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, var(--primary), rgba(252, 252, 252, 0.8));
-  color: var(--dark);
-  padding: 8px 25px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 5px 20px #ff2e6e44;
+  letter-spacing: 1.2px;
+  z-index: 3;
+  border: 2px solid #fff;
 }
 
-.plan-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--primary);
-  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
+.plan-title-personalizado {
+  color: #000;  
+  background: #00000000;
+  border: 2px solid #ff2e6d00;
+  border-radius: 12px;
+  padding: 10px 24px;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 2px 12px #ffb6d5, 0 1px 0 #eee;
+  text-shadow: 0 2px 8px #000000, 0 1px 0 #000000;
+  margin-bottom: 18px;
+  margin-top: 8px;
+  transition: box-shadow 0.3s, border 0.3s, background 0.3s, color 0.3s;
 }
 
-.plan-card.featured:hover {
-  transform: scale(1.08) translateY(-10px);
-}
-
-.plan-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 25px;
-  color: var(--light);
-  font-weight: 700;
-  letter-spacing: 1px;
+.plan-title-personalizado:hover {
+  background: #ff2e6e;
+  color: #000000 !important;
+  border: 2px solid #000;
+  box-shadow: 0 4px 18px #ff2e6e55, 0 1px 0 #000;
 }
 
 .plan-price {
@@ -129,21 +106,22 @@
 
 .plan-price .currency {
   font-size: 1.5rem;
-  color: var(--primary);
+  color: #ff2e6e;
   font-weight: 600;
   margin-top: 10px;
 }
 
 .plan-price .amount {
-  font-size: 4rem;
-  color: var(--primary);
-  font-weight: 800;
+  font-size: 4.5rem;
+  color: #ff2e6e;
+  font-weight: 900;
   line-height: 1;
+  text-shadow: 0 2px 8px #000000, 0 1px 0 #000000;
 }
 
 .plan-price .cents {
   font-size: 2rem;
-  color: var(--primary);
+  color: #ff2e6e;
   font-weight: 600;
   margin-top: 10px;
 }
@@ -156,75 +134,90 @@
 }
 
 .plan-features li {
-  padding: 12px 0;
-  color: var(--gray);
-  font-size: 1rem;
-  border-bottom: 1px solid rgba(0, 247, 255, 0.1);
-  font-weight: 400;
+  padding: 14px 0;
+  color: #222;
+  font-size: 1.08rem;
+  border-bottom: 1px solid #ff5a8f33;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition: background 0.2s;
 }
 
 .plan-features li:last-child {
   border-bottom: none;
 }
 
+.plan-features li::before {
+  content: '✔';
+  color: #ff2e6da9;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
 .plan-button {
   display: block;
   width: 100%;
-  padding: 18px;
-  background: var(--primary);
-  color: var(--dark);
+  padding: 20px;
+  background: linear-gradient(90deg, #ff2e6e, #ff5a8f);
+  color: #fff;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.15rem;
   border-radius: 50px;
-  transition: var(--transition);
-  letter-spacing: 1px;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 1.2px;
+  box-shadow: 0 10px 30px #ff2e6e22;
   border: none;
   cursor: pointer;
+  text-shadow: 0 2px 8px #ffb6d5, 0 1px 0 #fff;
+  margin-top: 18px;
 }
 
 .plan-button:hover {
-  background: var(--light);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(90deg, #ff5a8f, #ff2e6e);
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 15px 40px #ff2e6e33;
+  color: #fff;
 }
 
-.results-intro {
-  text-align: center;
-  font-size: 1.2rem;
-  color: var(--gray);
-  margin-bottom: 3rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  font-weight: 300;
-}
-
-/* Responsividade dos planos */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .skills-section {
+    padding: 32px 0.5rem;
+  }
   .plans-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
   }
-
-  .plan-card.featured {
-    transform: scale(1);
-  }
-
-  .plan-card.featured:hover {
-    transform: translateY(-10px);
-  }
-
-  .plan-price .amount {
-    font-size: 3rem;
+  .plan-card {
+    min-width: 0;
+    width: 100%;
   }
 }
 
-
-
-
-
-
-
-
+@media (max-width: 600px) {
+  .skills-section {
+    padding: 18px 0.2rem;
+    border-radius: 12px;
+  }
+  .plan-card {
+    padding: 24px 8px;
+    border-radius: 12px;
+  }
+  .plan-card.featured .plan-badge {
+    font-size: 0.95rem;
+    padding: 7px 18px;
+    top: -14px;
+  }
+  .plan-title-personalizado {
+    font-size: 1.2rem;
+    padding: 7px 12px;
+    border-radius: 8px;
+  }
+  .plan-price .amount {
+    font-size: 2.2rem;
+  }
+  .plan-price .cents {
+    font-size: 1.1rem;
+  }
+}

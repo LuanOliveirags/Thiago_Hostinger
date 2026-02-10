@@ -26,31 +26,6 @@
   opacity: 0.8;
 }
 
-.faq-section .section-title {
-  position: relative;
-  padding-bottom: 25px;
-  margin-bottom: 50px;
-  background: linear-gradient(90deg, #ff2e6e 0%, #ff5a8f 50%, #f9266b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 12px #ff5a8f22;
-}
-
-.faq-section .section-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary), #ff5a8f);
-  border-radius: 2px;
-}
-
 .faq-intro {
   text-align: center;
   font-size: 1.15rem;
