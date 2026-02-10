@@ -19,10 +19,9 @@ export function initCarouselFeedback() {
 //   3.5 Auto-slide e navegação
 // ====================================================
 const feedbackPrints = [
-  'img/screenshot_1.png',
-  'img/screenshot_2.png',
-  'img/screenshot_3.png',
-  'img/screenshot_4.png',
+  'img/F_1.PNG', 'img/F_2.PNG', 'img/F_3.jpeg', 'img/F_4.PNG', 'img/F_5.PNG',
+  'img/F_6.PNG', 'img/F_7.PNG', 'img/F_8.PNG', 'img/F_9.PNG', 'img/F_10.jpeg',
+  'img/F_11.PNG', 'img/F_12.PNG', 'img/F_13.PNG', 'img/F_14.PNG'
 ];
 
 document.addEventListener('DOMContentLoaded', initFeedbackGallery);
@@ -46,7 +45,7 @@ function initFeedbackGallery() {
     </div>
     <div class="feedback-progress-dots" id="feedbackProgressDots"></div>
   `;
-  document.querySelector('.portfolio-feedbacks-section .container').appendChild(progressContainer);
+  document.querySelector('#feedbacks .container').appendChild(progressContainer);
 
   const progressFill = document.getElementById('feedbackProgressFill');
   const progressDots = document.getElementById('feedbackProgressDots');

@@ -40,7 +40,7 @@ function initFeedbackGallery() {
     </div>
     <div class="feedback-progress-dots" id="feedbackProgressDots"></div>
   `;
-  document.querySelector('.portfolio-feedbacks-section .container').appendChild(progressContainer);
+  document.querySelector('#feedbacks .container').appendChild(progressContainer);
 
   const progressFill = document.getElementById('feedbackProgressFill');
   const progressDots = document.getElementById('feedbackProgressDots');
