@@ -1,0 +1,44 @@
+/* Hero scroll arrow */
+.hero-scroll-arrow {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+.hero-scroll-arrow ion-icon {
+  font-size: 2.8em;
+  color: #fff;
+  opacity: 0.55;
+  animation: bounceDown 1.3s infinite;
+  pointer-events: auto;
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(18px); }
+}
+/* Logo na parte inferior da hero */
+.hero-logo-area {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  z-index: 3;
+  pointer-events: none;
+}
+.hero-logo-img {
+  width: 220px;
+  max-width: 98vw;
+  filter: drop-shadow(0 0 18px #ff2e6e88);
+  opacity: 0.98;
+  pointer-events: auto;
+}
