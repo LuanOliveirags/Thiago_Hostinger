@@ -15,8 +15,10 @@ import {
   initFunnelTracking,
   initAbandonTracking,
 } from '../features/analytics/analytics.js';
+import { initPWA } from '../features/pwa/pwa.js';
 
 export function initApp() {
+  initPWA();
   initAnalytics();
   initMenu();
   initHeader();
