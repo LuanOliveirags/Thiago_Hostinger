@@ -1,5 +1,14 @@
 /* ===== PRELOADER ===== */
 
+/* Fallback: some automaticamente após 5s caso o JS falhe */
+@keyframes preloader-hide {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
 #preloader {
   position: fixed;
   top: 0;
@@ -11,8 +20,11 @@
   justify-content: center;
   align-items: center;
   z-index: 10000;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
   overflow: hidden;
+  animation: preloader-hide 0.5s ease forwards 5s;
 }
 
 #preloader .preloader-circles {
@@ -32,7 +44,9 @@
   position: absolute;
   border-radius: 50%;
   border: 4px solid transparent;
-  box-shadow: 0 0 32px 6px #ff4f8a44, 0 0 0 0 #fff0;
+  box-shadow:
+    0 0 32px 6px #ff4f8a44,
+    0 0 0 0 #fff0;
   animation: preloader-spin 2.2s linear infinite;
 }
 #preloader .preloader-circle.pink {
@@ -42,7 +56,9 @@
   border-right: 4px solid #ff4f8a;
   border-bottom: 4px solid #ff4f8a44;
   border-left: 4px solid #ff4f8a22;
-  box-shadow: 0 0 32px 6px #ff4f8a88, 0 0 0 0 #fff0;
+  box-shadow:
+    0 0 32px 6px #ff4f8a88,
+    0 0 0 0 #fff0;
   animation-delay: 0s;
 }
 #preloader .preloader-circle.white {
@@ -52,7 +68,9 @@
   border-right: 4px solid #fff4;
   border-bottom: 4px solid #fff2;
   border-left: 4px solid #fff0;
-  box-shadow: 0 0 18px 2px #fff4, 0 0 0 0 #fff0;
+  box-shadow:
+    0 0 18px 2px #fff4,
+    0 0 0 0 #fff0;
   animation-delay: 0.5s;
 }
 #preloader .preloader-circle.glow {
@@ -62,13 +80,19 @@
   border-right: 4px solid #ff4f8a44;
   border-bottom: 4px solid #ff4f8a22;
   border-left: 4px solid #fff0;
-  box-shadow: 0 0 40px 10px #ff4f8a55, 0 0 0 0 #fff0;
+  box-shadow:
+    0 0 40px 10px #ff4f8a55,
+    0 0 0 0 #fff0;
   animation-delay: 1s;
 }
 
 @keyframes preloader-spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #preloader .preloader-content {
@@ -88,7 +112,9 @@
   background-clip: text;
   margin-bottom: 0.2em;
   letter-spacing: 0.04em;
-  text-shadow: 0 0 18px #ff4f8a55, 0 0 40px #fff2;
+  text-shadow:
+    0 0 18px #ff4f8a55,
+    0 0 40px #fff2;
 }
 
 #preloader .preloader-subtitle {
@@ -102,8 +128,12 @@
 }
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .preloader-content {
@@ -167,7 +197,8 @@
 }
 
 @keyframes iconPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
@@ -178,13 +209,13 @@
 }
 
 @keyframes spin {
-  0% { 
+  0% {
     transform: translate(-50%, -50%) rotate(0deg) scale(1);
   }
   50% {
     transform: translate(-50%, -50%) rotate(180deg) scale(1.1);
   }
-  100% { 
+  100% {
     transform: translate(-50%, -50%) rotate(360deg) scale(1);
   }
 }
@@ -197,7 +228,9 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-top: 200px;
-  animation: fadeInUp 1s ease-out, pulse 2s ease-in-out infinite 1s;
+  animation:
+    fadeInUp 1s ease-out,
+    pulse 2s ease-in-out infinite 1s;
   letter-spacing: 1px;
   text-shadow: 0 0 30px rgba(249, 38, 107, 0.3);
 }
@@ -224,7 +257,8 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+*.log
+*.local
+
+# Variáveis de ambiente com secrets reais (nunca versionar)
+.env
+.env.production
+.env.local
+.env.*.local
+
+# Cobertura de testes
+coverage/

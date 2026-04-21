@@ -19,8 +19,13 @@
   pointer-events: auto;
 }
 @keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(18px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+  }
 }
 /* Logo na parte inferior da hero */
 .hero-logo-area {

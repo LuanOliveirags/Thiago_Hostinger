@@ -18,8 +18,13 @@
   pointer-events: auto;
 }
 @keyframes bounceDown {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(18px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(18px);
+  }
 }
 /* Logo na parte inferior da hero */
 .hero-logo-area {
@@ -43,29 +48,48 @@
   pointer-events: auto;
 }
 .portfolio-item.active-highlight {
-  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  box-shadow:
+    0 0 32px #ff4f8a,
+    0 0 18px #f9266b99;
   transform: translateY(-6px) scale(1.07);
   z-index: 2;
   border: 2px solid var(--primary-light);
   background: #1a0d16;
-  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+  transition:
+    box-shadow 0.4s,
+    transform 0.4s,
+    border 0.4s,
+    background 0.4s;
   position: relative;
 }
 .diferenciais-list li.active-highlight {
-  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  box-shadow:
+    0 0 32px #ff4f8a,
+    0 0 18px #f9266b99;
   transform: translateY(-6px) scale(1.07);
   z-index: 2;
   border: 2px solid var(--primary-light);
   background: #1a0d16;
   color: #fff !important;
-  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s, color 0.4s;
+  transition:
+    box-shadow 0.4s,
+    transform 0.4s,
+    border 0.4s,
+    background 0.4s,
+    color 0.4s;
   position: relative;
 }
 .process-card.active-highlight {
-  box-shadow: 0 0 32px #ff4f8a, 0 0 18px #f9266b99;
+  box-shadow:
+    0 0 32px #ff4f8a,
+    0 0 18px #f9266b99;
   transform: translateY(-6px) scale(1.07);
   z-index: 2;
   border: 2px solid var(--primary-light);
   background: #1a0d16;
-  transition: box-shadow 0.4s, transform 0.4s, border 0.4s, background 0.4s;
+  transition:
+    box-shadow 0.4s,
+    transform 0.4s,
+    border 0.4s,
+    background 0.4s;
 }

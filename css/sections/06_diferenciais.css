@@ -18,19 +18,23 @@
 .diferenciais-box {
   background: #ffffff;
   border-radius: 24px;
-  box-shadow: 0 10px 60px rgba(249, 38, 107, 0.15), 0 0 0 1px rgba(255, 79, 138, 0.1);
+  box-shadow:
+    0 10px 60px rgba(249, 38, 107, 0.15),
+    0 0 0 1px rgba(255, 79, 138, 0.1);
   padding: 50px 45px;
   max-width: 550px;
   width: 100%;
   color: #181818;
   font-family: 'Montserrat', Arial, sans-serif;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
   position: relative;
   overflow: hidden;
 }
 
 .diferenciais-box::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -41,7 +45,9 @@
 
 .diferenciais-box:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 70px rgba(249, 38, 107, 0.2), 0 0 0 1px rgba(255, 79, 138, 0.15);
+  box-shadow:
+    0 15px 70px rgba(249, 38, 107, 0.2),
+    0 0 0 1px rgba(255, 79, 138, 0.15);
 }
 
 .diferenciais-title {
@@ -56,7 +62,7 @@
 }
 
 .diferenciais-title::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -83,7 +89,9 @@
   gap: 15px;
   padding: 15px;
   border-radius: 12px;
-  transition: background 0.3s, transform 0.2s;
+  transition:
+    background 0.3s,
+    transform 0.2s;
   line-height: 1.5;
 }
 
@@ -97,7 +105,7 @@
 }
 
 .diferenciais-list li::before {
-  content: "✓";
+  content: '✓';
   flex-shrink: 0;
   width: 28px;
   height: 28px;
@@ -125,35 +133,35 @@
   .diferenciais-section {
     padding: 60px 0;
   }
-  
+
   .diferenciais-container {
     padding: 0 15px;
   }
-  
+
   .diferenciais-box {
     padding: 35px 25px;
     max-width: 100%;
   }
-  
+
   .diferenciais-title {
     font-size: 1.5rem;
     margin-bottom: 25px;
   }
-  
+
   .diferenciais-list li {
     font-size: 1rem;
     padding: 12px 8px;
     gap: 12px;
     margin-bottom: 15px;
   }
-  
+
   .diferenciais-list li::before {
     width: 24px;
     height: 24px;
     font-size: 0.9rem;
     margin-top: 2px;
   }
-  
+
   .diferenciais-obs {
     font-size: 0.85rem;
     margin-left: 36px;
@@ -164,21 +172,21 @@
   .diferenciais-section {
     padding: 50px 0;
   }
-  
+
   .diferenciais-container {
     padding: 0 10px;
   }
-  
+
   .diferenciais-box {
     padding: 30px 20px;
     border-radius: 20px;
   }
-  
+
   .diferenciais-title {
     font-size: 1.3rem;
     margin-bottom: 20px;
   }
-  
+
   .diferenciais-list li {
     font-size: 0.95rem;
     padding: 10px 5px;
@@ -186,14 +194,14 @@
     margin-bottom: 12px;
     align-items: flex-start;
   }
-  
+
   .diferenciais-list li::before {
     width: 22px;
     height: 22px;
     font-size: 0.85rem;
     margin-top: 1px;
   }
-  
+
   .diferenciais-obs {
     font-size: 0.8rem;
     margin-left: 32px;

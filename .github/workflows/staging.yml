@@ -1,0 +1,53 @@
+name: Deploy — Staging (GitHub Pages Preview)
+
+# Ativado em pushes para develop
+# Faz deploy em uma branch gh-pages-staging separada
+# URL de staging: https://<usuario>.github.io/<repo>/
+# (sem custom domain — staging é separado de produção)
+
+on:
+  push:
+    branches: [develop]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: staging-deploy
+  cancel-in-progress: true
+
+jobs:
+  staging:
+    name: Build e Deploy para Staging
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Validar (lint + format + testes)
+        run: npm run validate
+
+      - name: Build com Vite (staging)
+        run: npm run build
+        env:
+          # Permite injetar variáveis de ambiente específicas de staging
+          NODE_ENV: staging
+
+      - name: Deploy para branch gh-pages-staging
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages-staging
+          # Sem CNAME — staging usa URL do GitHub Pages sem domínio customizado
+          # URL será: https://<usuario>.github.io/<repo>

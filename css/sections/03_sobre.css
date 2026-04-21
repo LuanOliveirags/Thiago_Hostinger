@@ -4,7 +4,7 @@
   background: #fff;
   box-shadow: 0 2px 24px #0001;
 }
-.about-section .section-title{
+.about-section .section-title {
   position: relative;
   padding-bottom: 25px;
   margin-bottom: 50px;
@@ -18,7 +18,6 @@
 }
 .about-section .about-content,
 .about-section .about-content p {
-
   text-align: center;
   max-width: 700px;
   margin: 0 auto;
@@ -27,7 +26,6 @@
 .about-section .about-content strong {
   color: var(--primary);
 }
-
 
 /* Espaçamento melhorado para parágrafos do sobre mim */
 .about-content p {

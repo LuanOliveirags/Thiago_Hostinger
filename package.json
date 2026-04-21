@@ -1,0 +1,37 @@
+{
+  "name": "thiago-bazillio-site",
+  "version": "1.0.0",
+  "description": "Landing page de consultoria online de treinamento feminino — Thiago Bazillio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint \"src/**/*.js\"",
+    "lint:fix": "eslint \"src/**/*.js\" --fix",
+    "format": "prettier --write \"src/**/*.js\" \"css/**/*.css\" \"index.html\"",
+    "format:check": "prettier --check \"src/**/*.js\" \"css/**/*.css\" \"index.html\"",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "validate": "npm run lint && npm run format:check && npm run test",
+    "release:patch": "npm run validate && npm version patch && git push --follow-tags",
+    "release:minor": "npm run validate && npm version minor && git push --follow-tags",
+    "release:major": "npm run validate && npm version major && git push --follow-tags"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.0",
+    "eslint": "^8.57.0",
+    "jsdom": "^29.0.2",
+    "prettier": "^3.3.3",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@sentry/browser": "^10.49.0"
+  }
+}
