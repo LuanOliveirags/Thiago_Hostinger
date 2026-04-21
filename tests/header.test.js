@@ -23,7 +23,7 @@ describe('Header', () => {
     Object.defineProperty(window, 'pageYOffset', { value: 0, writable: true, configurable: true });
     window.dispatchEvent(new Event('scroll'));
     const header = document.querySelector('.header');
-    expect(header.style.boxShadow).toBe('0 2px 20px rgba(0, 0, 0, 0.3)');
+    expect(header.style.boxShadow).toBe('none');
   });
 
   it('aplica shadow intenso ao rolar a página', () => {
@@ -35,7 +35,7 @@ describe('Header', () => {
     });
     window.dispatchEvent(new Event('scroll'));
     const header = document.querySelector('.header');
-    expect(header.style.boxShadow).toBe('0 2px 30px rgba(0, 0, 0, 0.5)');
+    expect(header.style.boxShadow).toBe('0 2px 24px rgba(0,0,0,0.55)');
   });
 
   it('aplica parallax ao hero-content durante scroll', () => {

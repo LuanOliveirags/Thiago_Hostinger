@@ -96,35 +96,10 @@ function initMenuDesktop() {
       if (target) {
         const header = query(SELECTORS.header);
         const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = target.offsetTop - headerHeight;
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });
-  });
-
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-
-  function onScrollMenuDesktop() {
-    if (!desktopMenu) {
-      return;
-    }
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > lastScrollY && currentScrollY > 80) {
-      desktopMenu.style.transform = 'translateY(-120%)';
-      desktopMenu.style.transition = 'transform 0.4s cubic-bezier(0.4,0,0.2,1)';
-    } else {
-      desktopMenu.style.transform = 'translateY(0)';
-      desktopMenu.style.transition = 'transform 0.4s cubic-bezier(0.4,0,0.2,1)';
-    }
-    lastScrollY = currentScrollY;
-    ticking = false;
-  }
-
-  window.addEventListener('scroll', function () {
-    if (!ticking) {
-      window.requestAnimationFrame(onScrollMenuDesktop);
-      ticking = true;
-    }
   });
 }

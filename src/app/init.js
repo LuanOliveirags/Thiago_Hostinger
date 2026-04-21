@@ -12,6 +12,8 @@ import {
   initAnalytics,
   initScrollDepthTracking,
   initCTATracking,
+  initFunnelTracking,
+  initAbandonTracking,
 } from '../features/analytics/analytics.js';
 
 export function initApp() {
@@ -29,6 +31,8 @@ export function initApp() {
   initRevealObserver();
   initScrollDepthTracking();
   initCTATracking();
+  initFunnelTracking();
+  initAbandonTracking();
 }
 
 // ===== DESTAQUE DINÂMICO DOS CARDS "PARA QUEM É" NO MOBILE =====

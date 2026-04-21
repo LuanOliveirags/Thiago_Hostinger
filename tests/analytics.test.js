@@ -8,6 +8,8 @@ import {
   trackCarouselInteraction,
   initScrollDepthTracking,
   initCTATracking,
+  initFunnelTracking,
+  initAbandonTracking,
 } from '../src/features/analytics/analytics.js';
 
 describe('Analytics — trackEvent', () => {
@@ -140,5 +142,60 @@ describe('Analytics — initCTATracking', () => {
       event_category: 'CTA',
       plan_name: 'Plano Gold',
     });
+  });
+});
+
+describe('Analytics — initFunnelTracking', () => {
+  beforeEach(() => {
+    window.gtag = vi.fn();
+    document.body.innerHTML = `
+      <section id="para-quem-e"></section>
+      <section id="planos"></section>
+      <section id="resultados"></section>
+    `;
+  });
+
+  afterEach(() => {
+    delete window.gtag;
+  });
+
+  it('não lança erro quando as seções do funil existem', () => {
+    expect(() => initFunnelTracking()).not.toThrow();
+  });
+
+  it('não lança erro quando seções do funil estão ausentes', () => {
+    document.body.innerHTML = '';
+    expect(() => initFunnelTracking()).not.toThrow();
+  });
+});
+
+describe('Analytics — initAbandonTracking', () => {
+  beforeEach(() => {
+    window.gtag = vi.fn();
+    document.body.innerHTML = `<section id="planos"></section>`;
+  });
+
+  afterEach(() => {
+    delete window.gtag;
+  });
+
+  it('não lança erro ao inicializar', () => {
+    expect(() => initAbandonTracking()).not.toThrow();
+  });
+
+  it('envia evento de abandono ao sair sem ver os planos', () => {
+    initAbandonTracking();
+    // Simula visibilityState = 'hidden' direto na propriedade do window
+    Object.defineProperty(document, 'visibilityState', {
+      value: 'hidden',
+      writable: true,
+      configurable: true,
+    });
+    window.dispatchEvent(new Event('visibilitychange'));
+    expect(window.gtag).toHaveBeenCalledWith(
+      'event',
+      'page_abandon_before_plans',
+      expect.objectContaining({ event_category: 'Abandono' })
+    );
   });
 });

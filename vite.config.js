@@ -14,12 +14,28 @@ export default defineConfig(({ command }) => ({
     sourcemap: false,
     target: 'es2015',
     chunkSizeWarningLimit: 600,
+    // Minificação CSS inline (atributos style=)
+    cssMinify: true,
+    // Minificação HTML
+    minify: 'esbuild',
     rollupOptions: {
       output: {
-        // Sentry em chunk separado para não bloquear o bundle principal
-        manualChunks: {
-          sentry: ['@sentry/browser'],
+        // Chunks separados: Sentry isolado + features agrupadas por domínio
+        manualChunks(id) {
+          if (id.includes('@sentry')) {
+            return 'vendor-sentry';
+          }
+          if (id.includes('src/features/analytics')) {
+            return 'feature-analytics';
+          }
+          if (id.includes('src/features/feedbacks') || id.includes('src/features/resultados')) {
+            return 'feature-media';
+          }
         },
+        // Nomes de chunk com hash para cache busting
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash][extname]',
       },
     },
   },
