@@ -68,7 +68,7 @@ img,
   }
   .navigation {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     gap: 0;
     padding: 0.5rem 0.5rem;

@@ -484,6 +484,8 @@
 }
 
 .logo img {
+  height: 44px;
+  width: auto;
   transition: var(--transition);
   border-radius: 5%;
 }
@@ -491,6 +493,20 @@
 .logo img:hover {
   transform: scale(1.1);
   filter: drop-shadow(0 0 10px var(--primary));
+}
+
+/* Desktop: logo no nav visível, hero-logo-area oculta */
+@media (min-width: 769px) {
+  .hero-logo-area {
+    display: none !important;
+  }
+}
+
+/* Mobile: logo no nav oculta, hero-logo-area permanece */
+@media (max-width: 768px) {
+  .logo {
+    display: none !important;
+  }
 }
 
 /* ===== MENU TOGGLE BUTTON ===== */
@@ -693,6 +709,7 @@
 @media (max-width: 768px) {
   .navigation {
     padding: 0.5rem 1rem;
+    justify-content: flex-end;
   }
 
   .header {
